@@ -41,6 +41,7 @@ module RondoForm
     def link_to_add_association(*args, &block)
       if block_given?
         f, association, locals, html_options = *args
+        puts locals
         html_options ||= {}
         link_to_add_association(capture(&block), f, association, locals, html_options)
       else
